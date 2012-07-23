@@ -1,0 +1,41 @@
+1st week, July 18th – 20th
+
+Learning material highlights:
+- concepts on Agile
+- basics of Java
+- DRY, shy and tell the other guy: Do not repeat yourself, keep limited interaction, and request instead of being asked
+- TDD: behaviors drive implementations; test doubles; etc.
+
+* Can you help understand what you understood was the purpose of this problem?
+
+* What principles/perspectives did you take from the reference materials and applied to this exercise?
+ Java coding;
+ TDD: I wrote the test class first, with each test corresponding to one requirement roughly. But there were names of tests only, since it took me
+    longer to figure out how to test on IO output.
+
+* What aspects of your thinking did this problem challenge you?
+ I'm used to just start doing something directly and looking for the best solution or correcting errors on the way I go. But TDD works from the
+ goals/results of something. Especially in this problem, when I have not idea what to be tested with the IO.
+
+* Please describe what you experienced while addressing this problem and at the end?
+ I searched for some reference and found that it's not appropriate to test on console output. While I was looking for a suitable interface, I had
+ to kind of work from both ends: the tests and the program itself. So far I've ended up with calling a method to display a specific message, which
+ returns a list of arrays of strings. However I'm not so satisfied with this approach.
+
+* What aspects didn't/did you like about solving this problem?
+* What aspects did you like/didn't like about this pre-course exercise?
+ Likes: Most instructions were clear and organized into steps; The workload is appropriate; I really like the videos!
+ Dislikes: There are quite a lot new concepts to digest, the IO problem may not be necessary at this stage. Plus the learning material doesn't
+    include details on this. Secondly, I hesitated a lot on to what extend should I develop this project. If treating it as a really industry
+    project, then I should make it easier to add future requirement, rather than leaving the menu, book list and so on as string messages.
+
+* What have you gained by this exercise that you are considering incorporating in yourself/your approach?
+ I like the way Git handles version control and sharing files. I wish I could become good at it and use it beyond software programs.
+
+* What kind support you need related to the material and while working through the exercise? (this is to be incorporated in next exercises)
+ So far I'm ok with what provided. I'd like to have the chance to learn from some good examples of the exercise. I feel that reading good codes
+ benefits me the most.
+
+* What perspectives in the reference material/reading material do you disagree with? What experiences of your past doesn't go well with the perspectives?
+
+* How will you know what assumptions the reference materials are making? How will you know whether the perspectives/suggestions present in the reference materials are valid or effective?
