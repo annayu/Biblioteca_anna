@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 
 //input/output messages for the user system
-public class message {
+public class Message {
 
     public String getUserInput()
     {
@@ -44,6 +44,7 @@ public class message {
         menuDisplay.add( "A. View all books in the library.");
         menuDisplay.add( "B. Reserve a book for collection.");
         menuDisplay.add( "C. Check your library number.");
+        menuDisplay.add( "D. View all movies in the library. ");
         menuDisplay.add( "Select an option by its index letter and press 'enter'.");
         return menuDisplay;
     }
@@ -52,19 +53,23 @@ public class message {
     public ArrayList<String> showOptionSelected(char option)
     {
         ArrayList<String> optionDisplay = new ArrayList<String>();
-        // A/a.View all books
-        if(option == 'a' || option == 'A')  optionDisplay = showBooks();
-        // B/b.Reserve a book
-        if(option == 'b' || option == 'B')   {
+        // A.View all books
+        if( option == 'A')  optionDisplay = showBooks();
+        // B.Reserve a book
+        if( option == 'B')   {
             optionDisplay = showBooks();
             optionDisplay.add("Select a book by its number and press 'enter'.");
         }
-        // C/c.Check library number
-        if(option == 'c' || option == 'C')   {
+        // C.Check library number
+        if( option == 'C')   {
             optionDisplay.add("Please talk to Librarian. Thank you.");
         }
-        // error message on invalid options
-        if(option != 'a' && option != 'A' && option != 'b' && option !='B' && option != 'c' && option != 'C')  {
+        // D. View movies
+        if( option == 'D')   {
+            optionDisplay = showMovies();
+        }
+        // error Message on invalid options
+        if( option != 'A' && option !='B' && option != 'C'&& option!= 'D')  {
             optionDisplay.add("Select a valid option!!");
         }
 
@@ -93,11 +98,41 @@ public class message {
     //return the list of all books
     public ArrayList<String> showBooks()
     {
-        ArrayList<String> bookDisplay = new ArrayList<String>();
-        bookDisplay.add( "1.Head First Java");
-        bookDisplay.add( "2.Agile Development");
-        bookDisplay.add( "3.Eloquent JavaScrip");
-        return bookDisplay;
+        ArrayList<String> books = new ArrayList<String>();
+        books.add("1.Head First Java");
+        books.add("2.Agile Development");
+        books.add("3.Eloquent JavaScrip");
+        return books;
+    }
+
+    //return the list of movies
+    public ArrayList<String> showMovies()
+    {
+        ArrayList<String> movies = new ArrayList<String>();
+        movies.add("MovieName1 Director1 10");
+        movies.add("MovieName2 Director2 9");
+        movies.add("MovieName3 Director3 8");
+        movies.add("MovieName4 Director4 7");
+        movies.add("MovieName5 Director5 6");
+        movies.add("MovieName6 Director6 5");
+        movies.add("MovieName7 Director7 6");
+        movies.add("MovieName8 Director8 7");
+        movies.add("MovieName9 Director9 8");
+        movies.add("MovieName10 Director10 9");
+        movies.add("MovieName11 Director11 10");
+        movies.add("MovieName12 Director12 N/A");
+        movies.add("MovieName13 Director13 N/A");
+        movies.add("MovieName14 Director14 N/A");
+        movies.add("MovieName15 Director15 N/A");
+        return movies;
+    }
+
+    public ArrayList<String> showEnding()
+    {
+        ArrayList<String> ending = new ArrayList<String>();
+        ending.add("To exit the system, press 'q'.");
+        ending.add("To return to the main menu, press 'm'.");
+        return ending;
     }
 
 }
